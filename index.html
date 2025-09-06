@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cactaria</title>
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header id="mainHeader">
+    <div class="logo">
+      <i class="fas fa-seedling"></i>
+      Cactaria
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Cactus</a></li>
+        <li><a href="#">Contactos</a></li>
+      </ul>
+    </nav>
+
+    <button class="btn-shop"
+            onclick="window.open('https://wa.me/numero?text=Hola%20quiero%20comprar%20Cactaria', '_blank')">
+      Comprar ahora
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Bienvenido a Cactaria</h1>
+      <p>Descubre nuestros cactus y su encanto natural</p>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <main class="container">
+    <h2 class="products-title">Nuestras Plantas</h2>
+
+    <div class="products-grid">
+      <!-- Producto 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/producto/1.jpeg" alt="Sedum de cobre.">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Sedum de cobre.</div>
+          <div class="product-price">$1.50</div>
+          <button class="add-to-cart" onclick="openModal(0)">Más Información</button>
+        </div>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/producto/2.jpeg" alt="Black Carved">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Maihueniopsis darwinii</div>
+          <div class="product-price">$1.50</div>
+          <button class="add-to-cart" onclick="openModal(1)">Más Información</button>
+        </div>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/producto/4.jpeg" alt="Cactus dragón rojo">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Cactus dragón rojo</div>
+          <div class="product-price">$1.50</div>
+          <button class="add-to-cart" onclick="openModal(2)">Más Información</button>
+        </div>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/producto/5.jpeg" alt="Cactus de pelo de anciano">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Cactus de pelo de anciano</div>
+          <div class="product-price">$1.50</div>
+          <button class="add-to-cart" onclick="openModal(3)">Más Información</button>
+        </div>
+      </div>
+
+      <!-- Producto 6 
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/producto/6.jpeg" alt="Artificial Plant">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Artificial Plant</div>
+          <div class="product-price">$43.00</div>
+          <button class="add-to-cart" onclick="openModal(4)">Más Información</button>
+        </div>
+      </div> -->
+
+      <!-- Producto 7 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/producto/7.jpeg" alt="Artificial Plant">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Árbol de jade Gollum o orejas de Shrek</div>
+          <div class="product-price">$1.50</div>
+          <button class="add-to-cart" onclick="openModal(5)">Más Información</button>
+        </div>
+      </div>
+
+      <!-- Producto 8 
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/producto/8.jpeg" alt="Artificial Plant">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Artificial Plant</div>
+          <div class="product-price">$43.00</div>
+          <button class="add-to-cart" onclick="openModal(6)">Más Información</button>
+        </div>
+      </div>
+    </div>-->
+  </main>
+
+  <footer>
+    <p>© 2025 Cactaria - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- MODAL DINÁMICO -->
+  <div class="modal-overlay" id="productModal">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <!-- Botón cerrar -->
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">&times;</button>
+
+      <!-- Imagen (ARRIBA) -->
+      <div class="modal-image">
+        <img id="modalImg" src="" alt="Imagen del producto">
+      </div>
+
+      <!-- Título -->
+      <h2 class="modal-title" id="modalTitle"></h2>
+
+      <!-- Precio -->
+      <p class="modal-price" id="modalPrice"></p>
+
+      <!-- Descripción -->
+      <p class="modal-description" id="modalDescription"></p>
+
+      <!-- Cuidados (DEBAJO DE LA IMAGEN, BLOQUE TARJETA) -->
+      <div class="modal-care">
+        <h3>Cuidados</h3>
+        <ul id="modalCareList"></ul>
+      </div>
+
+      <!-- Botón de acción -->
+      <div class="modal-actions">
+        <button class="modal-buy" id="modalBuy">Comprar ahora</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
