@@ -50,18 +50,6 @@ const products = [
     ]
   },
   {
-    name: "Artificial Plant",
-    price: "$43.00",
-    image: "",
-    description:
-      "Planta decorativa sin mantenimiento, ideal para oficinas.",
-    care: [
-      "Limpieza: Paño seco.",
-      "Evita: Humedad excesiva.",
-      "Ubicación: Interior."
-    ]
-  },
-  {
     name: "Árbol de jade Gollum o orejas de Shrek",
     price: "$1.50",
     image: "img/producto/6.jpeg",
