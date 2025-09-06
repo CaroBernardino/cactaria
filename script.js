@@ -52,7 +52,7 @@ const products = [
   {
     name: "Árbol de jade Gollum o orejas de Shrek",
     price: "$1.50",
-    image: "img/producto/6.jpeg",
+    image: "img/producto/7.jpeg",
     description:
       "Esta suculenta se distingue por sus hojas tubulares y cóncavas, que se asemejan a pequeños tubos con ventosas en los extremos, lo que le da su apodo de orejas de Shrek. Los tallos son gruesos y leñosos con el tiempo, y la planta puede crecer hasta convertirse en un arbusto. Las hojas son de un color verde brillante, y las puntas pueden adquirir un tono rojizo con suficiente luz solar.",
     care: [
